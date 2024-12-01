@@ -27,7 +27,7 @@ const EnrollForm = () => {
   const displayRazorpay = () => {
     const options = {
       key: 'rzp_live_6vd9RApruseTAi', // Replace with your Razorpay API Key
-      amount: 100, // ₹99 in paise
+      amount: 9900, // ₹99 in paise
       currency: 'INR',
       name: 'Blanklearn',
       description: '3 Days Trial Class',
@@ -94,16 +94,16 @@ const EnrollForm = () => {
       </p>
       <h3 className="text-lg font-bold mb-2">Choose Class to Enroll</h3>
       <div className="grid grid-cols-3 gap-2 mb-4">
-        {[...Array(10)].map((_, index) => (
-          <button
-            key={index + 1}
-            className={`py-2 px-4 rounded-full border ${
-              selectedGrade === index + 1 ? 'bg-blue-500 text-white' : 'border-blue-500 text-blue-500'
-            }`}
-            onClick={() => handleGradeSelect(index + 1)}
-          >
-            {index + 1}st
-          </button>
+      {[...Array(10)].map((_, index) => (
+       <button
+         key={index + 1}
+         className={`py-2 px-4 rounded-full border ${
+        selectedGrade === index + 1 ? 'bg-blue-500 text-white' : 'border-blue-500 text-blue-500'
+        }`}
+        onClick={() => handleGradeSelect(index + 1)}
+         >
+          {index + 1}{index === 0 ? 'st' : index === 1 ? 'nd' : index === 2 ? 'rd' : 'th'}
+       </button>
         ))}
       </div>
 

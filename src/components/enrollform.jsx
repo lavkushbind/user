@@ -15,6 +15,7 @@ const EnrollForm = () => {
     if (value.length <= 10) {
       setPhoneNumber(value);
     }
+    
   };
 
   const loadRazorpay = () => {

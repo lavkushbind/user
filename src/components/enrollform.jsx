@@ -28,7 +28,7 @@ const EnrollForm = () => {
   const displayRazorpay = () => {
     const options = {
       key: 'rzp_live_6vd9RApruseTAi', // Replace with your Razorpay API Key
-      amount: 9900, // ₹99 in paise
+      amount:200, // ₹99 in paise
       currency: 'INR',
       name: 'Blanklearn',
       description: '3 Days Trial Class',
